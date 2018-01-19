@@ -1,7 +1,8 @@
 # protractor-cucumber-example
 Example project using Protractor with Cucumber and Page Objects
 
-This creates some basic cucumber tests using the same Super Calculator application used in the official Protractor tutorial - http://juliemr.github.io/protractor-demo/
+Basic testscripts for truespace
+https://app-dev.truespace.com/login
 
 
 ## Getting Started
@@ -9,8 +10,8 @@ This creates some basic cucumber tests using the same Super Calculator applicati
 ### Clone Repository
 
 ```
-git clone https://github.com/mlev/protractor-cucumber-example.git
-cd protractor-cucumber-example
+git clone https://github.com/raranab/rarana.git
+cd rarana
 ```
 
 ### Install Dependencies
