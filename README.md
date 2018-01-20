@@ -1,5 +1,4 @@
 # protractor-cucumber-example
-HACKIADO!
 Example project using Protractor with Cucumber and Page Objects
 
 Basic testscripts for truespace
