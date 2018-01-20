@@ -1,8 +1,8 @@
 {
   "name": "truespace-protractor-cucumber",
   "description": "Protractor with Cucumber and Page Objects",
+  "repository": "https://github.com/raranab/rarana.git",
   "license": "Apache-2.0",
-  "version": "1",
   "devDependencies": {
     "chai": "~3.5.0",
     "chai-as-promised": "~6.0.0",
