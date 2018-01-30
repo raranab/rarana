@@ -1,3 +1,5 @@
+
+
 var chai = require('chai').use(require('chai-as-promised'));
 var expect = chai.expect;
 
@@ -22,13 +24,20 @@ var LogInSteps = function() {
   
    this.When('I click log in', function (callback) {
     this.logIn.logInButton();
-   
    callback();
   });
 
-  this.Then('The user is logged', function (callback){
-    expect(browser.getCurrentUrl()).to.eventually.equal('https://app-dev.truespace.com/dashboard').and.notify(callback);
+  this.Then('the user is logged', {timeout : 60 *1000} ,function (callback) {
+      expect(browser.getCurrentUrl()).to.eventually.equal('https://app-dev.truespace.com/dashboard').and.notify(callback);
+      expect(this.logIn.logOutText()).to.eventually.equal('Log Out').and.notify(callback);
+      this.logIn.logOut();
   });
+
+  this.Then('an invalid message is shown: Invalid email or password, try again', {timeout : 60 *1000} ,function (callback) {
+    expect(browser.getCurrentUrl()).to.eventually.equal('https://app-dev.truespace.com/login').and.notify(callback);
+    expect(this.logIn.alertMessage()).to.eventually.contain('Invalid email or password, try again').and.notify(callback);
+      
+});
 };
 
 module.exports = LogInSteps;

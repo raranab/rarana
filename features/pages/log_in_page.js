@@ -6,7 +6,11 @@ var LogInPage = function() {
       };
     
       this.logOut = function() {
-        element(by.buttonText('Log Out')).getText()
+        element(by.buttonText('Log Out')).click();
+      };
+
+      this.logOutText = function() {
+        return element(by.buttonText('Log Out')).getText()
       };
     
       // Log in element
@@ -18,9 +22,15 @@ var LogInPage = function() {
         element(by.css('[ng-reflect-name="password"]')).sendKeys(value);
       };
     this.logInButton = function(){
-        element(by.buttonText('Log In')).click()
-      }
- 
+        element(by.buttonText('Log In')).click();
+      };
+  
+    this.alertMessage = function(){
+       return element.all(by.css('[class="ng-star-inserted"]')).getText();
+    };
+    this.getStarted = function(){
+        element(by.buttonText('GET STARTED')).click();
+    }
     };
   
     
